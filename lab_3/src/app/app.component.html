@@ -1,0 +1,20 @@
+<p>
+  <label>Input 1 number </label>
+  <input [(ngModel)]="num" placeholder="{{num}} [step]=5 id=" type="number">
+  <br>
+  <label>Input 2 number </label>
+  <input [(ngModel)]="num2" placeholder="{{num2}} id=" type="number">
+</p>
+<p>
+  <label> Sum 2 numbers = {{sum()}}</label>
+  <label> Subtract 2 numbers = {{subtraction()}}</label>
+  <label> Multiply 2 numbers = {{multiply()}}</label>
+  <br>
+  <label>Input for your name</label>
+  <input [(ngModel)]="name" (input)="checkNameNull()">
+  <button *ngIf="!name_null" (click)="addNameToList()"> Add name </button>
+</p>
+
+<br>
+{{listName|json}}
+
