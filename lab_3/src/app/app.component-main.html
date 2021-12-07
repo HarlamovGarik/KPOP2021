@@ -1,0 +1,19 @@
+<p>S
+  <label>a: </label>
+  <input [(ngModel)]="a" (input)="CheckVariable()" placeholder="{{a}} id=" type="number">
+
+  <label>b: </label>
+  <input [(ngModel)]="b" (input)="CheckVariable()" placeholder="{{b}} id=" type="number">
+
+  <label>c: </label>
+  <input [(ngModel)]="c" (input)="CheckVariable()" placeholder="{{c}} id=" type="number">
+  <br>
+  <button *ngIf="variables" (click)="Solve()"> SOLVE </button>
+</p>
+
+
+
+  <print_value [test]="[solve_1,solve_2]"></print_value>
+<br>
+<print_value [userName]="name"></print_value>
+<div>Выбранное имя: {{name}}</div>

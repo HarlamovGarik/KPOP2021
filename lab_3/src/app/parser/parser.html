@@ -1,0 +1,56 @@
+<div *ngIf="cancel" class="b-popup">
+
+  <div class="b-popup-content">
+    <div id="blockPopUP">
+      <b> USER-ID - {{date[0]}}</b>
+      <b> ID - {{date[1]}}</b>
+      <b> TITLE - {{date[2]}}</b>
+      <b> TEXT - {{date[3]}}</b>
+    </div>
+    <button (click)="ClickCancel()"><img id="cancel" src="assets\img\cancel.png" style="width: 20px" alt="fwwf">
+    </button>
+    <button (click)="addValueToBucket(date)">ADD Value</button>
+  </div>
+</div>
+
+<button (click)="Parsing()">Search</button>
+<!--{{json_result | json}}-->
+
+
+<div class="table" *ngIf="click_button">
+  <table>
+    <tr>
+      <th>UserID</th>
+      <th>Id</th>
+      <th>Title</th>
+      <th>Text</th>
+    </tr>
+    <tr *ngFor="let item of json_result">
+
+      <td (click)="PopUpText([item.userId,item.id,item.title,item.body])" class="id_name id">{{item.userId}}</td>
+      <td class="id_name">{{item.id}}</td>
+      <td id="title">{{item.title}}</td>
+      <td>{{item.body}}</td>
+    </tr>
+  </table>
+  <div *ngIf="bucket[0] !=null">
+    <hr>
+    <table>
+      <tr>
+        <th>UserID</th>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Text</th>
+      </tr>
+
+    <tr  *ngFor="let item of bucket">
+      <td> {{item[0]}}</td>
+      <td> {{item[1]}}</td>
+      <td> {{item[2]}}</td>
+      <td> {{item[3]}}</td>
+    </tr>
+    </table>
+  </div>
+</div>
+
+
