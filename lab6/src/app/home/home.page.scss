@@ -1,0 +1,87 @@
+a{
+  text-align: center;
+  text-decoration: none;
+  display: block;
+
+}
+ion-toolbar{
+  background: #11565a;
+  margin: 0;
+  padding: 0;
+}
+table.table{
+  border-collapse: separate;
+
+  padding: 8px;
+
+  width: 100%;
+  text-align: justify;
+  font-size: 16px ;
+}
+th{
+  font-size: 20px;
+  color: white;
+  background: #11565a;
+  text-align: center;
+  padding: 5px 0 0 5px;
+}
+td{
+  border-collapse: collapse;
+  border-bottom: 2px solid #000000;
+  color: black;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+tr{
+
+  background: #5aa7a8;
+}div.table{
+   width: 1200px;
+   margin-right: auto;
+   margin-left: auto;
+ }
+tr:hover {background: rgba(255, 255, 255, 0.7);}
+.id_name{
+  text-align: center;
+}
+.id {
+  font-weight: bold;
+}
+
+
+#cancel img{
+  display: block;
+  height:auto;
+  float: right;
+}
+b{
+  width: 100%;
+  display: block;
+  background: #11565a;
+
+}
+
+.b-popup{
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  overflow:hidden;
+  position:fixed;
+  top:0;
+}
+#blockPopUP div{
+  float: left;
+  width: 50px;
+  display: block;
+}
+.b-popup-content{
+  padding: 5px;
+  margin:50px auto 0 auto;
+  position: relative;
+  width:140px;
+  height: auto;
+  background-color: #c5c5c5;
+  border-radius:5px;
+  box-shadow: 0 0 10px #000;
+}

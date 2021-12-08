@@ -1,0 +1,36 @@
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <a routerLink="/favorite" routerLinkActive="active"> favorite </a>
+
+  </ion-toolbar>
+</ion-header>
+
+
+<button (click)="Parsing()">Search</button>
+<!--{{json_result | json}}-->
+
+
+<div class="table" *ngIf="click_button">
+  <table>
+    <tr>
+      <th>Id</th>
+      <th>Title</th>
+      <th>Text</th>
+      <th></th>
+    </tr>
+<!--    {{result | json}}-->
+    <tr *ngFor="let item of result"  (click)="showAlert(item)">
+
+<!--      <td  class="id_name id">{{item.userId}}</td>-->
+      <td class="id_name">{{item.id}}</td>
+      <td id="title">{{item.title}}</td>
+      <td>{{item.body}}</td>
+      <ion-checkbox (ionChange)="test(item)" [(ngModel)]="item.isChecked"></ion-checkbox>
+
+    </tr>
+  </table>
+
+</div>
+
+
